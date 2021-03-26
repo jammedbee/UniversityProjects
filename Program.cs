@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Task1_Gas_tank
 {
@@ -6,11 +7,24 @@ namespace Task1_Gas_tank
     {
         static void Main(string[] args)
         {
-            var tank1 = new FuelTank(10);
+            var tank1 = new FuelTank(10, 20, 30);
             tank1.PrintInfo();
             tank1.FillTank("Gas");
             tank1.PrintInfo();
-            Console.WriteLine("₽" + tank1.FullTankCost);
+            Console.WriteLine("Full load will cost ₽" + tank1.FullTankCost);
+            var tank2 = new FuelTank(10, 20);
+            tank2.FillTank("Kerosene");
+            tank2.PrintInfo();
+            Console.WriteLine("Full load will cost ₽" + tank2.FullTankCost);
+            var tank3 = new FuelTank(10);
+            tank3.FillTank("Petrol");
+            tank3.PrintInfo();
+            Console.WriteLine("Full load will cost ₽" + tank3.FullTankCost);
+            var tank4 = new FuelTank(20);
+            tank4.FillTank("Bio-fuel");
+            tank4.PrintInfo();
+            Console.WriteLine("Full load will cost ₽" + tank4.FullTankCost);
+
         }
     }
 
@@ -28,7 +42,7 @@ namespace Task1_Gas_tank
 
         public string FuelType;
 
-        public double FullTankCost //fdfdf
+        public double FullTankCost
         {
             get
             {
