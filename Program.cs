@@ -28,7 +28,7 @@ namespace Task1_Gas_tank
 
         public string FuelType;
 
-        public double FullTankCost
+        public double FullTankCost //fdfdf
         {
             get
             {
